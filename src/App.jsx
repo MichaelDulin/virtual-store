@@ -1,20 +1,20 @@
-import './App.css';
-import { Provider } from 'react-redux'; // this is our new Provider from the library that connects "stores" to react applications.
-import createStore from './store';
-import DisplayVotes from './Components/DisplayVotes'
-import VoteForm from './Components/VoteForm';
+import React from 'react';
+// import { Provider } from 'react-redux'; // this is our new Provider from the library that connects "stores" to react applications.
+import createStore from './store/index';
+import Header from './Components/Header/index';
+import Categories from './Components/Categories/index';
+import Products from './Components/Products/index';
+import Footer from './Components/Footer/index';
 
-function App() {
+const App = () => {
   return (
-    <Provider store={createStore()}>
-      <div className="App">
-        <header className="App-header">
-          <DisplayVotes />
-          <VoteForm />
-        </header>
-      </div>
-    </Provider>
+    <div>
+      <Header />
+      <Categories />
+      <Products />
+      <Footer />
+    </div>
   );
-}
+};
 
 export default App;
